@@ -1,14 +1,8 @@
 import {HttpClient, HttpClientConfig} from "bungie-api-ts/http"
-import {
-    DestinyActivityDefinition,
-    DestinyManifestLanguage,
-    getDestinyManifest,
-    getDestinyManifestComponent,
-} from "bungie-api-ts/destiny2"
+import {DestinyManifestLanguage, getDestinyManifest, getDestinyManifestComponent} from "bungie-api-ts/destiny2"
 import {DestinyManifestComponentName} from "bungie-api-ts/destiny2/manifest"
 import {DestinyDisplayPropertiesDefinition} from "bungie-api-ts/destiny2/interfaces"
 import {mkdir, writeFile} from "node:fs/promises"
-import {exists} from "node:fs"
 
 function createHttpClient(key: string): HttpClient {
     return async function(config: HttpClientConfig) {
