@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "run": "node dist/index.js"
   },
   "dependencies": {
     "bungie-api-ts": "^5.1.0"

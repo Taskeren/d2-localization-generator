@@ -56,8 +56,8 @@ const TABLES: DestinyManifestComponentName[] = ["DestinyActivityDefinition"]
                 result[tableEntry.hash] = tableEntry.displayProperties.name
             }
 
-            await mkdir("../out/", {recursive: true})
-            await writeFile(`../out/${tableName}_${language}.json`, JSON.stringify(result, null, 2), {
+            await mkdir("./out/", {recursive: true})
+            await writeFile(`./out/${tableName}_${language}.json`, JSON.stringify(result, null, 2), {
                 flag: "w+",
             })
         }

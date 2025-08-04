@@ -48,8 +48,8 @@ const TABLES = ["DestinyActivityDefinition"];
             for (let tableEntry of tableEntries) {
                 result[tableEntry.hash] = tableEntry.displayProperties.name;
             }
-            await (0, promises_1.mkdir)("../out/", { recursive: true });
-            await (0, promises_1.writeFile)(`../out/${tableName}_${language}.json`, JSON.stringify(result, null, 2), {
+            await (0, promises_1.mkdir)("./out/", { recursive: true });
+            await (0, promises_1.writeFile)(`./out/${tableName}_${language}.json`, JSON.stringify(result, null, 2), {
                 flag: "w+",
             });
         }
